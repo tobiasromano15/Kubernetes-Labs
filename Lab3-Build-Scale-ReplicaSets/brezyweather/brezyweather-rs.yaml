@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind:  ReplicaSet
+metadata:
+  name: brezyweather-rs
+  labels:
+    app: brezyweather
+spec:
+  selector:
+    matchLabels:
+      app: brezyweather
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: brezyweather
+    spec:
+      containers:
+        - name: brezyweather
+          image: codewithpraveen/labs-k8s-brezyapp:1.0.0
+          ports:
+            - containerPort: 80
+
+  
