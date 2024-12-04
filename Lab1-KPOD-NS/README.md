@@ -1,0 +1,2 @@
+THIS IS A PROOF OF CONCEPT TO PROBE THE NEXT SCENARIO: 
+In this lab, you will be working as a DevOps engineer at an e-commerce based startup. As part of the annual technology audit, the recommendation to the organization is to start using Kubernetes. Currently, the developer team is manually provisioning the application whenever a new server is launched and this has slowed down the overall deployment and update process. You have been tasked with building a proof-of-concept by creating a POD based on given specifications.
