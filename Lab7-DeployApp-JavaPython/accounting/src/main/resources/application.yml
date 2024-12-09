@@ -1,0 +1,22 @@
+spring:
+  main:
+    banner-mode: OFF
+  datasource:
+    url: ${ACCOUNTING_DATABASE_URL}
+    username: ${ACCOUNTING_DATABASE_USERNAME}
+    password: ${ACCOUNTING_DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    baseline-on-migrate: true
+
+server:
+  port: 8881
+  
+setting:
+  accounting:
+    dashboard:
+      url: ${ACCOUNTING_DASHBOARD_URL}
+      status: ${ACCOUNTING_DASHBOARD_STATUS}
