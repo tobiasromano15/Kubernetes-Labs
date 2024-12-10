@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-custom-request-headers    # A
+  namespace: ingress-nginx
+data:
+  nginx-request-time: $time_iso8601
+  nginx-source: mycompany-nginx
+  nginx-more-request-header: just-sample-dummy-header
+ 
+---
+ 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-custom-response-headers   # B
+  namespace: ingress-nginx
+data:
+  nginx-response-time: $time_iso8601
+  nginx-version: $nginx_version 

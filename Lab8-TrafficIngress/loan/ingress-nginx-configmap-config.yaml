@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ingress-nginx-controller
+  namespace: ingress-nginx
+data:
+  proxy-set-headers: ingress-nginx/nginx-custom-request-headers   
+  add-headers: ingress-nginx/nginx-custom-response-headers
+  proxy-read-timeout: "5"
