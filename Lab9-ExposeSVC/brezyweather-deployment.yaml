@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brezyweather-deploy
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: brezyweather-pod
+          image: codewithpraveen/labs-k8s-brezyapp:1.0.0
+          ports:
+            - containerPort: 80
+  replicas: 2
