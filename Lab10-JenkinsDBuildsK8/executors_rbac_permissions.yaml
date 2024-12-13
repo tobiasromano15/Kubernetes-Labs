@@ -1,0 +1,30 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: jenkins-executors
+  namespace: jenkins
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+      - pods/exec
+      - pods/log
+      - persistentvolumeclaims
+      - events
+    verbs: 
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - ""
+    resources: 
+      - pods
+      - pods/exec
+      - persistentvolumeclaims
+    verbs:
+      - create
+      - delete
+      - deletecollection
+      - patch
+      - update
